@@ -15215,7 +15215,7 @@ Test Dataframe Shape = (21892, 188)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Thus we confirmed that every feature in this dataset is numeric and strictly between 0 and 1. The target variable is a categorical variable encoded as in integer</p>
+<p>Thus we confirmed that every feature in this dataset is numeric and strictly between 0 and 1. The target variable is a categorical variable encoded as an integer</p>
 
 </div>
 </div>
@@ -15450,7 +15450,7 @@ Name: label, dtype: float64</pre>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The training set and test set have almost the same distribution.</p>
-<p>Our dataset is very imbalanced with almost 83% examples being normal normal heartbeats (category 0) and the rest being various arrhythmias. To deal with this, I'll do two different approach. One with stratified sampling to down sample the data, which will preserve the distribution of data classes which can be done using the train_test_split() method from sklearn.  Another approach would be weighted sampling to create balanced dataset which is done similarly.</p>
+<p>Our dataset is very imbalanced with almost 83% examples being normal normal heartbeats (category 0) and the rest being various arrhythmias. To deal with this, I'll do two different approaches. One with stratified sampling to down sample the data, which will preserve the distribution of data classes. It can be done using the train_test_split() method from sklearn.  Another approach would be weighted sampling to create balanced dataset which is done similarly.</p>
 
 </div>
 </div>
@@ -19454,7 +19454,7 @@ class="
 <li>Macro F1: Combining precision and recall together into the Macro F1 score shows that on average, most of the models are preforming very similarly. The significant difference we see here is that models trained with balanced dataset vastly outperforms models trained with imbalanced dataset. </li>
 </ul>
 <ul>
-<li>Train Times: It is clear that models trained on balanced dataset finishes training faster than those with imbalanced dataset. The KNN models trained almost instantly. The Random Forest Models finished in under 10 minutes which is relatively fast. The Gradient Boosting model on the full dataset took the longest to train, with the gradient boosting model on the filtered dataset taking under half that time. This illustrates that gradient boosting models train very slowly compared to other models. Finally the SVC model trained on the full dataset took less than half the time to train Gradient Boosting model. Interestingly, reducing the number of features significantly increase the training speed. </li>
+<li>Train Times: It is clear that models trained on balanced dataset finishes training faster than those with imbalanced dataset. The KNN models trained almost instantly. The Random Forest Models finished in under 10 minutes which is relatively fast. The Gradient Boosting model on the full dataset took the longest to train, with the gradient boosting model on the filtered dataset taking under half that time. This illustrates that gradient boosting models train very slowly compared to other models. Finally the SVC model trained on the full dataset took less than half the time to train Gradient Boosting model. Interestingly, reducing the number of features significantly shorten the training time. </li>
 </ul>
 
 </div>
